@@ -6,15 +6,37 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Compose Tweet</title>
   <link rel="stylesheet" href="app.css">
+
+  <!--shell process-->
+  <!--lets app talk to Desktop to deal with tasks outside of app-->
+  <!--normally goes at bottom so that it happens after page has loaded-->
+  <script type="text/javascript">
+  var electron = require('electron');
+  var shell = electron.shell;
+  var ipc = electron.ipcRenderer;
+  </script>
+
 </head>
 
-<body id="page-info">
+<body id="page-info" link="#FFFFFF" alink="#8E8E8E" vlink="#000000">
   <main class="info-content">
-    <h3 class="page-headline">Tweeeeeet</h3>
+    <h3 class="page-headline">Hi, I'm Kasie Kelldorf!</h3>
     <p>
-      things that go in box<br>
-      <strong>more things</strong><br>
-      <small>created by me</small>
+      wow, I did this<br>
+      <strong>I can do a lot of things</strong><br>
+      want to see more?<br>
+      <small>checkout my
+        <a href="#"
+        onclick="shell.openExternal('https://www.facebook.com/kkelldorf')">
+          fb
+        </a>
+      </small>
+    </p>
+    <p>
+      <a href="#"
+      onclick="ipc.sendSync('closeInfoWindow')">
+        close window
+      </a>
     </p>
   </main>
 </body>

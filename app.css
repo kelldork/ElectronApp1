@@ -19,19 +19,29 @@ html {
 }
 
 #page-info a:link {
-  color: #EEC856;
+  color: #FFFFFF;
+}
+
+#page-info a:visited {
+  color: #8E8E8E;
+}
+
+#page-info a:active {
+  color: #8E8E8E;
 }
 
 #page-info .info-content {
   background: linear-gradient( 180deg,
-    rgba(234, 192, 59, .75),
-    rgba(24, 101, 85, .95));
+    /*rgba(234, 192, 59, .75),
+    rgba(24, 101, 85, .95)); */
+    rgba(206, 103, 81, .75),
+    rgba(241, 180, 103, .95));
   width: 90%;
   padding: 30px;
   border-radius: 20px;
   text-align: center;
   align-self: center;
-  border: 2px solid rgba(24, 101, 85, .95);
+  border: 2px solid rgba(241, 180, 103, .95); /*rgba(24, 101, 85, .95);*/
   box-shadow: 5px 5px 20px rgba(0, 0, 0, .4);
   overflow:hidden;
 }
